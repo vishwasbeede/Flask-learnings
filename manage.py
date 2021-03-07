@@ -6,7 +6,6 @@ from api.models import db, User, Class
 
 manager = Manager(create_app)
 
-
 @manager.command
 def createdb(testdata=False):
     app = create_app()
