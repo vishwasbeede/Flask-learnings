@@ -1,4 +1,5 @@
 from app import apps
+from flask import render_template,request,redirect
 
 @apps.route("/about")
 def names():
@@ -6,4 +7,10 @@ def names():
 
 @apps.route("/index")
 def names1():
-    return "<a>Hello 123</a>"
+    return render_template("/public/index.html")
+
+@apps.route("/sign-up", methods=["GET", "POST"])
+def sign_up():
+    return render_template("/public/signup_1.html")
+
+# export FLASK_APP=run.py;export FLASK_ENV=development
